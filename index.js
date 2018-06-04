@@ -129,14 +129,14 @@ function moveDodgerLeft() {
   var leftPos = dodger.style.left.replace('px', '');
   var leftPx = parseInt(leftPos, 10);
   if (leftPx > 0) {
-    
+    move(DODGER, 'left');
   }
 }
 
 function move(el, dir) {
-  var left = 0;
+  var movePos = 0;
   function step() {
-    DODGER.style.left = `${left +=1}px`
+    el.style[dir] = `${dir +=1}px`
     
     if (left < 4) {
       window.requestAnimationFrame(step)
