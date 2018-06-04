@@ -134,7 +134,8 @@ function endGame() {
     ROCKS[i].remove();
   }
   window.removeEventListener('keydown', moveDodger);
-  alert('YOU LOSE!');
+  //alert('YOU LOSE!');
+  console.log('You lose: ' + gameInterval);
 }
 
 /**
