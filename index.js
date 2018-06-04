@@ -122,10 +122,10 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  var leftPx = dodger.style.lft.replace('px', '');
-  var right = parseInt(leftPx, 10);
-  if (right > 0) {
-    dodger.style.right = `${right - 4}px`
+  var leftPx = dodger.style.left.replace('px', '');
+  var left = parseInt(leftPx, 10);
+  if (left > 0) {
+    dodger.style.left = `${left - 4}px`
   }
   // implement me!
   /**
