@@ -99,11 +99,10 @@ function createRock(x) {
      */
      
     function step() {
-      rock.style.top = `${top += 1}px`
+      rock.style.top = `${top += 2}px`
       console.log(rock.style.top);
       if (top < 400) {
         window.requestAnimationFrame(step);
-      }
       }
     }
     window.requestAnimationFrame(step);
