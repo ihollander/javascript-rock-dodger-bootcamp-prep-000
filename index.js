@@ -136,6 +136,7 @@ function moveDodgerLeft() {
   function step() {
     DODGER.style.left = `${left -= 1}px`
     if (left > 0 && left > stop) {
+      console.log(DODGER.style.left);
       window.requestAnimationFrame(step);
     }
   }
@@ -153,6 +154,7 @@ function moveDodgerRight() {
   function step() {
     DODGER.style.right = `${right -= 1}px`
     if (right > 0 && right > stop) {
+      console.log(DODGER.style.right);
       window.requestAnimationFrame(step);
     }
   }
