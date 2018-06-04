@@ -130,7 +130,7 @@ function createRock(x) {
  */
 function endGame() {
   gameInterval = null;
-  $('.rock').remove();
+  document.('.rock').remove();
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
 }
