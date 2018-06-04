@@ -137,12 +137,14 @@ function moveDodgerLeft() {
   var stop = left - 5;
   function step() {
     DODGER.style.left = `${left -= 1}px`
-    if (left > 0 && left > stop) {
+    if (left > stop) {
       console.log('Dodger left: ' + DODGER.style.left);
       window.requestAnimationFrame(step);
     }
   }
-  window.requestAnimationFrame(step);
+  if (left > 0) {
+    window.requestAnimationFrame(step);
+  }
 }
 
 /**
@@ -155,8 +157,8 @@ function moveDodgerRight() {
   var stop = left + 5;
   function step() {
     DODGER.style.left = `${left += 1}px`
-    if (left < GAME_WIDTH && left < stop) {
-    console.log('Dodger right: ' + DODGER.style.right);
+    if (left < stop) {
+    console.log('Dodger left: ' + DODGER.style.left);
       window.requestAnimationFrame(step);
     }
   }
