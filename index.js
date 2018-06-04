@@ -130,7 +130,11 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  
+  var rightPx = dodger.style.right.replace('px', '');
+  var right = parseInt(rightPx, 10);
+  if (right > 0) {
+    dodger.style.right = `${right - 4}px`
+  }
   // implement me!
   /**
    * This function should move DODGER to the right
