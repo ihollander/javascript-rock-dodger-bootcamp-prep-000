@@ -87,7 +87,7 @@ function createRock(x) {
      * we should call endGame()
      */
     if (checkCollision(rock)) {
-      endGame();  
+      endGame();
     }
     
     /**
@@ -105,6 +105,8 @@ function createRock(x) {
       console.log(rock.style.top);
       if (top < 400) {
         window.requestAnimationFrame(step);
+      } else {
+        
       }
     }
     window.requestAnimationFrame(step);
