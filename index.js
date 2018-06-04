@@ -162,7 +162,9 @@ function moveDodgerRight() {
       window.requestAnimationFrame(step);
     }
   }
-  window.requestAnimationFrame(step);
+  if (left < GAME_WIDTH) {
+    window.requestAnimationFrame(step);
+  }
 }
 
 /**
