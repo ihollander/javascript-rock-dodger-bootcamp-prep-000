@@ -96,12 +96,9 @@ function createRock(x) {
      */
     function step() {
       rock.style.top = `${top += 2}px`
-      console.log(rock.style.top);
       if (top < 400) {
         window.requestAnimationFrame(step);
-      } else {
-        GAME.remove(rock);
-      }
+      } 
     }
     window.requestAnimationFrame(step);
     
