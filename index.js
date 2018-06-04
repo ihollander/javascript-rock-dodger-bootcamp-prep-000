@@ -151,7 +151,7 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   var rightPos = DODGER.style.right.replace('px', ''); //position of element
   var right = parseInt(rightPos, 10); //current position of element as integer
-  var stop = right - 4;
+  var stop = right - 5;
   function step() {
     DODGER.style.right = `${right -= 1}px`
     if (right > 0 && right > stop) {
