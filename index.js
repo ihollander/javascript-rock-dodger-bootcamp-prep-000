@@ -121,7 +121,8 @@ function moveDodger(e) {
   console.log('Key press: ' + e.which);
   if (e.which === 37) {
     moveDodgerLeft()
-  } else if (e.which === 39) {
+  } 
+  if (e.which === 39) {
     moveDodgerRight()
   }
 }
