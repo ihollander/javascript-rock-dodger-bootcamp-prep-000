@@ -118,7 +118,6 @@ function endGame() {
  * And be sure to use the functions declared below!
  */
 function moveDodger(e) {
-  alert(e.which);
   if (e.which === 37) {
     moveDodgerLeft()
   } else if (e.which === 39) {
