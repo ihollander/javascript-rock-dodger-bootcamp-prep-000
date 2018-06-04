@@ -129,7 +129,7 @@ function moveDodgerLeft() {
   var leftPos = dodger.style.left.replace('px', '');
   var leftPx = parseInt(leftPos, 10);
   if (leftPx > 0) {
-    move(DODGER, 'left');
+    DODGER.style.left = `${leftPos - 4}px`
   }
 }
 
