@@ -154,9 +154,9 @@ function moveDodgerRight() {
   var right = parseInt(rightPos, 10); //current position of element as integer
   var stop = right - 5;
   function step() {
+    console.log('Dodger right: ' + DODGER.style.right);
     DODGER.style.right = `${right -= 1}px`
     if (right > 0 && right > stop) {
-      console.log('Dodger right: ' + DODGER.style.right);
       window.requestAnimationFrame(step);
     }
   }
