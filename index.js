@@ -122,6 +122,11 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
+  var leftPx = dodger.style.lft.replace('px', '');
+  var right = parseInt(leftPx, 10);
+  if (right > 0) {
+    dodger.style.right = `${right - 4}px`
+  }
   // implement me!
   /**
    * This function should move DODGER to the left
