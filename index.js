@@ -135,15 +135,14 @@ function moveDodgerLeft() {
   var left = parseInt(leftPos, 10); //current position of element as integer
   var stop = left - 5;
   function step() {
-    DODGER.style.left = `${left -= 1}px`
-    if (left > stop) {
-      console.log('Dodger left: ' + DODGER.style.left);
-      window.requestAnimationFrame(step);
+    if (left > 0) {
+      DODGER.style.left = `${left -= 1}px`
+      if (left > stop) {
+        window.requestAnimationFrame(step);
+      }
     }
   }
-  if (left > 0) {
-    window.requestAnimationFrame(step);
-  }
+  window.requestAnimationFrame(step);
 }
 
 /**
