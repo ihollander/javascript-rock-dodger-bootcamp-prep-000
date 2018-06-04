@@ -127,10 +127,11 @@ function moveDodger(e) {
  */
 function moveDodgerLeft() {
   var leftPos = DODGER.style.left.replace('px', ''); //position of element
-  var left = parseInt(leftPos, 10); //position of element as integer
+  var left = parseInt(leftPos, 10); //current position of element as integer
+  var stop = left - 4;
   function step() {
     DODGER.style.left = `${left -= 1}px`
-    if (left > 0) {
+    if (left > 0 && left > stop) {
       window.requestAnimationFrame(step);
     }
   }
