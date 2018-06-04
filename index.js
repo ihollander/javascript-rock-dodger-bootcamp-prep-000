@@ -160,7 +160,6 @@ function moveDodgerLeft() {
   function step() {
     if (left > 0) {
       DODGER.style.left = `${left -= 1}px`
-      console.log(DODGER.style.left);
       if (left >= stop) {
         window.requestAnimationFrame(step);
       }
@@ -179,7 +178,6 @@ function moveDodgerRight() {
   function step() {
     if (left < GAME_WIDTH - 40) {
       DODGER.style.left = `${left += 1}px`;
-      console.log(DODGER.style.left);
       if (left <= stop) {
         window.requestAnimationFrame(step);
       }
