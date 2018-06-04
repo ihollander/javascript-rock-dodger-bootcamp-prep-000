@@ -129,11 +129,12 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  gameInterval = null;
+  gameInterval = 0;
   var allrocks = document.getElementsByClassName('rock');
   while(allrocks[0]) {
       allrocks[0].parentNode.removeChild(allrocks[0]);
   }
+  ROCKS.length = 0;
   window.removeEventListener('keydown', moveDodger);
   alert('YOU LOSE!');
 }
