@@ -94,12 +94,6 @@ function createRock(x) {
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
-
-    /**
-     * But if the rock *has* reached the bottom of the GAME,
-     * we should remove the rock from the DOM
-     */
-     
     function step() {
       rock.style.top = `${top += 2}px`
       console.log(rock.style.top);
@@ -110,6 +104,11 @@ function createRock(x) {
       }
     }
     window.requestAnimationFrame(step);
+    /**
+     * But if the rock *has* reached the bottom of the GAME,
+     * we should remove the rock from the DOM
+     */
+     
   }
 
   // We should kick of the animation of the rock around here
